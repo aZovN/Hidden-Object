@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Game</title>
+	<style type="text/css">
+		.main{
+			width: 1920px;
+			height: 1080px;
+
+		}
+
+		.bg{
+			background-image: url(cs.jpg);
+			width: 1920px;
+			height: 1080px;
+			display: flex;
+		}
+
+		.img{	
+			width: 1920px;
+			height: 1080px;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+		}
+		
+		.score_tab{
+
+			background-color: blue;
+			width: 200px;
+			height: 300px;
+			
+		}
+
+		.terror{
+			position: absolute;
+			left: 150px;
+			top: 500px;
+		}
+
+		.c4{
+			height: 60px;
+			width: 60px;
+			position: absolute;
+			left: 950px;
+			top: 620px;
+		}
+
+		.awp{
+			height: 50px;
+			width: 50px;
+			position: absolute;
+			top: 570px;
+			left: 690px;
+		}
+
+		.kit{
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			top: 700px;
+			left: 500px;
+		}
+	</style>
+</head>
+<body>
+<div class="bg">
+	<div class="main">
+		<div class="score_tab">
+			<h2>
+				1. Убить террориста.
+			</h2>
+			<h2>
+				2. Забрать дефуза.
+			</h2>
+			<h2>
+				3. Задефузить бомбу.
+			</h2>
+			<h2>
+				4. Засейвить авп.
+			</h2>
+			<h2 class="score">
+				Очки: <span>0</span>
+			</h2>
+			
+		</div>
+		<img src="terrorist.png" class="terror">
+		<img src="С4.png" class="c4">
+		<img src="kit.png" class="kit">
+		<img src="awp.png" class="awp">
+		
+	</div>
+</div>
+
+<script type="text/javascript">
+	let number = 0;
+	document.querySelector(".score").innerHTML = number;
+	document.querySelector(".terror").onclick = function(){
+		
+		number = number + 10;
+		document.querySelector(".score").innerHTML = number;
+		document.querySelector(".terror").style.display = "none";
+		
+	}
+
+	document.querySelector(".score").innerHTML = number;
+	document.querySelector(".kit").onclick = function(){
+		
+		number = number + 10;
+		document.querySelector(".score").innerHTML = number;
+		document.querySelector(".kit").style.display = "none";
+		
+	}
+	
+	document.querySelector(".score").innerHTML = number;
+	document.querySelector(".c4").onclick = function(){
+		
+		number = number + 10;
+		document.querySelector(".score").innerHTML = number;
+		document.querySelector(".c4").style.display = "none";
+		
+	}
+
+	document.querySelector(".score").innerHTML = number;
+	document.querySelector(".awp").onclick = function(){
+		
+		number = number + 10;
+		document.querySelector(".score").innerHTML = number;
+		document.querySelector(".awp").style.display = "none";
+		
+	}
+
+</script>
+</body>
+</html>
